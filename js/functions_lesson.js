@@ -2,9 +2,9 @@
 // Functions //
 ///////////////
 
-// We've already been using functions
+// Context: We've already been using functions; this lesson will have small, toy examples
 // Vocab: function, call, invoke
-// Demo: function calls are expressions just like arithmatic operators; results are replaced with values
+// Demo: function calls are expressions just like arithmatic operators; results are replaced with values; builtin fns
 
 // Demo: Defining our own function -- increment, decrement
 // Vocab: argument, parameter, body, return
