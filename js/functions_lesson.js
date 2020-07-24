@@ -1,3 +1,8 @@
+"use strict";
+(function(){
+
+
+
 ///////////////
 // Functions //
 ///////////////
@@ -10,7 +15,7 @@
 
 var x = 2 + 3 * 6;
 // var x = 20;
-console.log(x);
+// console.log(x);
 // console.log(20);
 
 // var userInput = parseInt(prompt("Please enter a number."));
@@ -36,9 +41,9 @@ function decrement(x) {
     return x - 1;
 }
 
-console.log("10 incremented is " + increment(10));
+// console.log("10 incremented is " + increment(10));
 
-console.log(increment(decrement(increment(10))));
+// console.log(increment(decrement(increment(10))));
 // console.log(11);
 
 // Mini Exercise: Write a function named addTwo and test it out the same way we've used the increment function.
@@ -53,15 +58,15 @@ console.log(increment(decrement(increment(10))));
 
 // Vocab + Demo: Function expression vs declaration; anonymous functions
 
-// function declaration
-function increment(x) {
-    return x + 1;
-}
-// function expression
-// storing an anonymous function in a variable
-var increment = function(x) {
-    return x + 1;
-};
+// // function declaration
+// function increment(x) {
+//     return x + 1;
+// }
+// // function expression
+// // storing an anonymous function in a variable
+// var increment = function(x) {
+//     return x + 1;
+// };
 // you should be able to _read_ both of these; Write whichever brings you more joy
 // the two forms are basically equivalent -- they will produce the same results
 
@@ -89,14 +94,95 @@ function extractNumber(numberString) {
     return parseFloat(justTheNumbers);
 }
 
+/**
+ * Recap:
+ *
+ * - functions define placeholder *parameters* for the *arguments* they
+ *   will be called with
+ * - the *body* of the function runs when the function is *invoked*, with
+ *   the parameters taking on the value of the arguments
+ * - functions' *return value* (defined by the *return statement*) will
+ *   replace the function call
+ * - functions are defined with either a *function declaration* or
+ *   *function expression*
+ */
+
 ///////////
 // Scope //
 ///////////
 
 // Vocab: global, local
+// local scope: variables (including parameters) defined *inside* a function
+// global scope: variables defined *outside* of any functions; globally accessible values
 
 // Demo: local variables aren't accessible in the global scope
+// function increment(x) {
+//     var result = x + 1;
+//     return result;
+// }
+
+// increment(10);
+// console.log(result);
+
+// var aGlobalValue = 10;
+//
+// function increment(x) {
+//     return x + aGlobalValue;
+// }
+//
+// console.log(increment(10));
+
+
 // Demo: increment function with global and local variables x
+
+// function increment(x) {
+//     return x + 1;
+// }
+//
+// var x = 10;
+// console.log(increment(1));
+
+
 // Demo: modifying a variable (str, bool, number) inside of a function
 
+// var x = 10;
+//
+// function changeMe(x) {
+//     x = 123;
+// }
+//
+// changeMe(x);
+// console.log(x);
+
+
+var x = 10;
+
+function changeMe(x) {
+    x += 123;
+    return x;
+}
+
+x = changeMe(x);
+console.log(x);
+
 // Summary: which is better, global or local? + IIFEs
+// prefer local scope
+// IIFEs let us keep all our variables local to our js file
+// Immediately Invoked Function Expression
+
+// For all the .js files you work on:
+// ----- Start of the file -----
+"use strict";
+(function(){
+    // all your code goes here
+})();
+// ----- End of the file -----
+
+/**
+ * Scope Takeaways
+ *
+ * - Prefer local scope
+ * - Put all of your code in an IIFE
+ */
+
+})();
