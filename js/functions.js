@@ -108,7 +108,7 @@ calculateTipWithUser();
  */
 function applyDiscount(originalPrice, discountPercentage) {
     var discountAmount = originalPrice * discountPercentage;
-    var finalPrice = originalPrice = discountAmount;
+    var finalPrice = originalPrice - discountAmount;
     return finalPrice;
 }
 
