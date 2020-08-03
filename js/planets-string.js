@@ -27,4 +27,27 @@
     var planetsHTML = planetsArray.join("<br>")
     document.write(planetsHTML);
 
+    // <ul>
+    //     <li>1</li>
+    //     <li>2</li>
+    // </ul>
+
+    // loop version
+    // var planetsUL = "<ul>";
+    //
+    // planetsArray.forEach(function(planet){
+    //     planetsUL += "<li>" + planet + "</li>";
+    // });
+    //
+    // planetsUL += "</ul>";
+    //
+
+    var planetsUL = "<ul><li>";
+    planetsUL += planetsArray.join("</li><li>");
+    planetsUL += "</li></ul>";
+
+    console.log(planetsUL);
+    document.write(planetsUL);
+
+
 })();
