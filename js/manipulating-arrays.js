@@ -53,6 +53,12 @@ var moreColors = ["aColor", colors , 'zColor'];
 
 console.log(moreColors);
 
+var namesString = "Joe,Bob,Sally";
+var namesArray = namesString.split(',');
+console.log('namesArray',namesArray);
 
+"blue|red|yellow".split("") // split by chars
 
+var fullNameArray = "Fernando Mendoza Rodriguez".split(" ");
+console.log(fullNameArray.join("-"));
 
