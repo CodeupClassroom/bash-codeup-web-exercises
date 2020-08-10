@@ -11,6 +11,11 @@
     font-size: 30px;
 }
 
+h1.md {
+    font-size: 15px;
+    color: yellow;
+}
+
 #end-title {
     color: darkred;
 }
