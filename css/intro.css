@@ -1,23 +1,56 @@
+body {
+    background-image: url("../img/pastor.jpg");
+}
+
 #container h1, #container h2 {
     color: navy;
     background-color: lemonchiffon;
+    text-align: left;
+    text-indent: 40px;
+    font-family: "Times New Roman", Times, Serif;
 }
 
 .fancy-header {
+    font-family: Helvetica, Arial, Sans-Serif;
     color: yellowgreen;
+    font-style: italic;
 }
 
 .xl {
-    font-size: 30px;
+    font-size: 2em;
 }
 
 h1.md {
-    font-size: 15px;
+    font-size: 1.5em;
     color: yellow;
 }
 
 #end-title {
     color: darkred;
+    font-weight: bolder;
 }
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color: chartreuse;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:white;
+}
+
+ol { list-style: upper-alpha; }
+ul { list-style: square; }
 
 /* This is just a comment */
