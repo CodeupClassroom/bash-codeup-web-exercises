@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms Lecture</title>
+</head>
+<body>
+<!--    <form method="POST" action="https://request-inspector.glitch.me/">-->
+<!--        <label for="username">Username</label>-->
+<!--        <input id="username" name="username" type="text">-->
+<!--        <br>-->
+
+<!--        <label for="password">Password</label>-->
+<!--        <input id="password" name="password" type="password">-->
+<!--        <br>-->
+
+<!--        <input type="submit">-->
+<!--    </form>-->
+
+<!--    <form method="GET" action="https://request-inspector.glitch.me/">-->
+<!--        <label for="query">Search</label>-->
+<!--        <input id="query" name="q" type="text">-->
+<!--        -->
+<!--        <input id="detail" name="detail" type="text">-->
+<!--        <br>-->
+<!--&lt;!&ndash;        <input type="submit">&ndash;&gt;-->
+<!--        <button type="submit">Search</button>-->
+<!--    </form>-->
+
+
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <label for="username">Username</label>
+        <input value="Fer" placeholder="Your username" id="username" name="username" type="text">
+        <br>
+
+        <label for="password">Password</label>
+        <input disabled id="password" name="password" type="password">
+        <br>
+
+        Bio:
+        <br>
+        <textarea name="bio" cols="80" rows="10" maxlength="10">This</textarea>
+
+        <label>Spam me! <input type="checkbox" name="spam" value="true" checked></label>
+        <br>
+        A <input type="radio" name="quiz_question_1" value="a"><br>
+        B <input type="radio" name="quiz_question_1" value="b"><br>
+        C <input type="radio" name="quiz_question_2" value="c" checked><br>
+        D <input type="radio" name="quiz_question_2" value="d"><br>
+        <br>
+        <select name="instructor">
+            <option value="2" disabled>Douglas</option>
+            <option value="1">Fer</option>
+        </select>
+        <br>
+        <input type="hidden" name="source" value="Codeup">
+        <input type="submit">
+    </form>
+</body>
+</html>
