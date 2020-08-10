@@ -1,11 +1,18 @@
-h1 {
+#container h1, #container h2 {
     color: navy;
     background-color: lemonchiffon;
 }
-/* This is just a comment */
 
-h2 {
-    /* TODO: We will probably move this to a multi selector element*/
-    color: navy;
-    background-color: lemonchiffon;
+.fancy-header {
+    color: yellowgreen;
 }
+
+.xl {
+    font-size: 30px;
+}
+
+#end-title {
+    color: darkred;
+}
+
+/* This is just a comment */
