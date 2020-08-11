@@ -1,8 +1,14 @@
+:root {
+    --main-bg: #77A34A;
+    --duck-bg: #FFC62F;
+}
+
 body, html {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
+    background-color: var(--main-bg);
     font-family: Arial, Ubuntu, sans-serif;
 }
 
@@ -25,7 +31,7 @@ body, html {
 }
 
 .message-warning {
-    background-color: #dbb955;
+    background-color: var(--duck-bg);
     color: #3e3521;
 }
 
