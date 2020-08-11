@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+             /*1000px + 10px + 10px = 1020px*/
+            /* 100% -20px */
+            width: calc( 100% - 40px );
+            height: 500px;
+            border: 10px black solid;
+            margin: 10px;
+        }
+        #box1 {
+            background-color: bisque;
+            /* All directions */
+            padding: 10px;
+            margin: 0;
+            margin-top: 20px;
+        }
+        #box2 {
+            background-color: lightblue;
+            /* top/bottom right/left */
+            padding: 10px 11px;
+        }
+        #box3 {
+            background-color: lightgreen;
+            /* top right bottom left */
+            padding: 10px 11px 12px 13px;
+            margin-bottom: 20px;
+            /*padding-top: 10px;*/
+            /*padding-right: 11px;*/
+            /*padding-bottom: 12px;*/
+            /*padding-left: 13px;*/
+        }
+    </style>
+</head>
+<body>
+
+<div id="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem eum facere facilis hic in itaque labore magnam placeat praesentium quia recusandae repudiandae sit soluta, suscipit, tempora tempore. Eum, omnis?</div>
+<!--<div id="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda corporis cumque ducimus enim esse facilis hic molestias nesciunt nulla quae, recusandae rem unde vel, veniam voluptatem voluptatibus. Nostrum, unde?</div>-->
+<!--<div id="box3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda commodi cupiditate explicabo illo itaque labore laudantium magnam nisi, officiis porro quidem quis quo saepe sunt ut vitae voluptas voluptatem.</div>-->
+
+</body>
+</html>
