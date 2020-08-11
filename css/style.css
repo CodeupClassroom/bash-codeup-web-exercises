@@ -1,3 +1,44 @@
+body {
+    background-image: url("../img/moroccan-flower-dark.png");
+    background-repeat: repeat;
+    color: aliceblue;
+    font-family: 'Lobster', cursive;
+}
+
+header {
+    text-decoration: underline;
+    color: cadetblue;
+}
+
+#top {
+    text-align: center;
+}
+
 .fancy-header {
     color: rebeccapurple;
+}
+
+ul {
+    list-style-type:georgian;
+}
+
+table {
+    border: 3px white solid;
+}
+
+td, tr, th {
+    border: 1px white solid;
+    padding: 10px;
+}
+
+a {
+    color: orange;
+}
+
+a:visited {
+    color: orangered;
+}
+
+a:hover {
+    color: #929209;
 }
