@@ -5,7 +5,7 @@
 <table>
     <thead>
     <tr>
-        <th>Finished Module</th>
+        <th>Finished Lesson</th>
         <th>Evaluation</th>
     </tr>
     </thead>
