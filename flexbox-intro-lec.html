@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Basics Examples</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Helvetica;
+            font-weight: bold;
+        }
+        .flex-container {
+            width: 100%;
+            border: 3px solid goldenrod;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            height: 100VH;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .flex-item {
+            background: #BFD45D;
+            border: 2px solid #F9EFD6;
+            padding: 1em;
+            flex-grow: 1;
+        }
+        #important-item {
+            order: 1;
+            /*flex-grow: 1;*/
+        }
+        #really-important-item {
+            order: 2;
+            /*align-self: center;*/
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item" id="important-item">
+        Item 1
+<!--        <div>1</div>-->
+<!--        <div>2</div>-->
+<!--        <div>3</div>-->
+    </div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item" id="really-important-item">Item 3</div>
+<!--    <div class="flex-item">Item 4</div>-->
+<!--    <div class="flex-item">Item 5</div>-->
+<!--    <div class="flex-item">Item 6</div>-->
+<!--    <div class="flex-item">Item 7</div>-->
+<!--    <div class="flex-item">Item 8</div>-->
+<!--    <div class="flex-item">Item 9</div>-->
+<!--    <div class="flex-item">Item 10</div>-->
+<!--    <div class="flex-item">Item 11</div>-->
+</div>
+
+<!--<div class="container2">-->
+<!--    <div class="box1">First</div>-->
+<!--    <div class="box2">Second</div>-->
+<!--    <div class="box3">Third</div>-->
+<!--    <div class="box4">Fourth</div>-->
+<!--    <div class="box5">Fifth</div>-->
+<!--</div>-->
+
+</body>
+</html>
