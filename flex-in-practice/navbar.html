@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background-color: lightslategray;
+        }
+
+        nav {
+            background: #333333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* made unordered list a flex container */
+            justify-items: flex-end;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: Verdana;
+            display: inline-block; /* inline-block to increase clickable area beyond the text */
+            padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
+        }
+        nav a:hover {
+            background: white;
+            color: black;
+        }
+        nav ul li:nth-child(4) {
+            /*
+                this allows the last flex item to be right justified
+                by filling remaining space to the left of the flex item with margin
+            */
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
