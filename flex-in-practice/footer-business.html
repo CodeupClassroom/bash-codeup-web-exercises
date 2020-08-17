@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: "Nunito Sans", SansSerif;
+            min-height: 100vh; /* to keep footer at the bottom of the page */
+        }
+
+        footer {
+            background: black;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            min-width: 768px;
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        footer h1 {
+            margin: 0;
+            font-weight: bolder;
+        }
+        h5 {
+            color: white;
+            font-weight: 200;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer .icon-wrapper:hover,
+        footer .top-footer a:hover {
+            color: black;
+            background: white;
+        }
+
+        footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        footer .container {
+            padding: 4em 0;
+            height: 30em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .icon-wrapper {
+            border: 2px solid grey;
+            border-radius: 2.4em;
+            height: 2.4em;
+            width: 2.4em;
+            display: flex;
+        }
+        .icon-wrapper i {
+            /* here we center the icons inside their flex container wrappers */
+            margin: auto;
+        }
+        footer .top-footer a {
+            text-transform: uppercase;
+            font-weight: 200;
+        }
+        footer .bottom-footer a {
+            margin: .3em;
+        }
+        .line {
+            width: 100%;
+            height: 1px;
+            background: grey;
+        }
+
+        .top-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo-div {
+            /* here we set a larger size along the main axis and push the div a bit up for aesthetics */
+            flex-basis: 25%;
+            position: relative;
+            bottom: 5px;
+        }
+
+        .social-media-links {
+            /* here we make the div containing the social media links into a flex container to orient them in a row */
+            display: flex;
+        }
+
+        footer .bottom-footer {
+            /* here we ensure the social media link container is horizontally centered by setting its parent to be a flex container */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- page content -->
+
+<footer>
+    <div class="container">
+        <section class="top-footer">
+            <div class="logo-div">
+                <h1><a href="#">Logo</a></h1>
+                <a href="#">Sologan Company</a>
+            </div>
+            <ul>
+                <li><a href="#">Weebly Themes</a></li>
+                <li><a href="#">Pre-Sale FAQS</a></li>
+                <li><a href="#">Submit a Ticket</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Theme Tweak</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Widgetkit</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Affiliates</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </section>
+        <div class="line"></div>
+        <section class="bottom-footer">
+            <div class="social-media-links">
+                <a href="#">
+                    <span class="icon-wrapper">
+                        <i class="fab fa-facebook-f"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="icon-wrapper">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="icon-wrapper">
+                        <i class="fas fa-rss"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="icon-wrapper">
+                        <i class="fab fa-google-plus-g"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="icon-wrapper">
+                        <i class="fab fa-linkedin-in"></i>
+                    </span>
+                </a>
+            </div>
+            <h5>@Copyright. All rights reserved.</h5>
+        </section>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/ac39dd7048.js" crossorigin="anonymous"></script>
+</body>
+</html>
