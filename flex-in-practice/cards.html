@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Roboto;
+            background: lightgoldenrodyellow;
+        }
+        h1, h2, h3 {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        h3 {
+            color: grey;
+        }
+        hr {
+            border-top: 1px solid whitesmoke;
+            width: 90px;
+        }
+        .card {
+            margin: .5em;
+            border-radius: 2px;
+            background: white;
+            width: 250px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        img {
+            border-radius: 120px;
+            width: 120px;
+        }
+        i {
+            color: grey;
+        }
+        .icons {
+            /* the following declarations control the spacing between the social media icons */
+            width: 160px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .text-section {
+            position: relative;
+            bottom: 1.5em;
+        }
+        .icons i {
+            font-size: 2.2em;
+        }
+    </style>
+</head>
+<body>
+
+<article class="card">
+    <section>
+        <img src="https://fer-uig.glitch.me" alt="profile-image" >
+    </section>
+    <section class="text-section">
+        <h2>Ron Swanson</h2>
+        <h3>Director</h3>
+        <hr>
+    </section>
+    <section class="icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </section>
+</article>
+
+<script src="https://kit.fontawesome.com/ac39dd7048.js" crossorigin="anonymous"></script>
+</body>
+</html>
