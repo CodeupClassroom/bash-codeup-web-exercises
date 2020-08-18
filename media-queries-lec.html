@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Queries Lecture</title>
+    <style>
+        /*body {*/
+        /*    background: lightblue;*/
+        /*}*/
+        /*@media screen and (min-width: 500px) {*/
+        /*    body {*/
+        /*        background: lightgreen;*/
+        /*    }*/
+        /*}*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        nav>ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        nav>ul>li {
+            list-style: none;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            height: 2em;
+            text-decoration: none;
+            text-align: center;
+            line-height: 2em;
+            background: gray;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        main>section {
+            margin-bottom: 1em;
+        }
+
+        .hide-on-small-and-medium {
+            display: none;
+        }
+
+        /* Small devices (phones and pocket devices, 576 and up) */
+        @media screen and (min-width:576px) { /* ... */ }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media screen and (min-width:768px) { /* ... */ }
+
+        /* Large devices (desktops, 992px and up) */
+        @media screen and (min-width:992px) {
+            .hide-on-small-and-medium {
+                display: block;
+            }
+
+            nav {
+                background: lightgrey;
+                padding: 1em;
+            }
+
+            nav>ul {
+                display: flex;
+            }
+
+            nav>ul>li>a {
+                width: 6em;
+                height: 3em;
+                line-height: 3em;
+                margin-right: 1em;
+            }
+
+            main>section {
+                display: inline-block;
+                width: 49%;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media screen and (min-width:1200px) { /* ... */ }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Location</a></li>
+    </ul>
+</nav>
+<img class="hide-on-small-and-medium" src="img/900x400.jpg" alt="Ocean">
+<main>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam repellendus quis ex amet, eius eveniet
+        tenetur explicabo deleniti omnis voluptates culpa sunt, placeat ipsa optio. Omnis esse, dolores iste iure nihil
+        nam itaque tenetur repellendus modi autem nisi expedita in, accusantium vitae eaque qui molestiae perferendis
+        veritatis adipisci vero eligendi quo consequatur, quam corporis. Rerum quibusdam omnis dolores reprehenderit? Ad
+        fugiat autem et minima vero explicabo minus, repudiandae aliquid? Incidunt esse molestiae libero praesentium
+        exercitationem aliquid quas fuga corrupti, assumenda odit unde impedit nobis, nostrum voluptate vitae, facere
+        omnis? Maiores doloremque in tenetur, ex ab obcaecati consequuntur debitis optio.
+    </section>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempora totam facilis minus veniam provident.
+        Dolorum sequi voluptatum nesciunt, sunt fugit alias ratione tenetur, explicabo amet sit laboriosam quo beatae
+        quaerat odit delectus officiis voluptatibus neque. Dolores possimus reiciendis accusantium libero aut aperiam
+        quidem blanditiis dolorem, harum laudantium quae quibusdam delectus minima ut dignissimos repudiandae
+        perspiciatis. Officiis id, facere nemo eum, odio soluta officia impedit porro deleniti nihil velit esse ea.
+        Aliquam pariatur perspiciatis sunt accusamus in eveniet minus repudiandae suscipit quas! Dolor harum inventore
+        alias excepturi facilis quas sed repellendus, nemo commodi, natus illo aliquam nesciunt. Accusamus, eius dicta.
+    </section>
+</main>
+</body>
+</html>
