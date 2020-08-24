@@ -60,23 +60,138 @@
     <h2>Build your own</h2>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and Crust</a>
+            <a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and Crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span class="badge badge-pill badge-secondary">12</span> Cheese and sauce</a>
+            <a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge badge-pill badge-secondary">12</span> Cheese and sauce</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span> Toppings</a>
+            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span> Toppings</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            first tab
+        <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="home-tab">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Select size and crust
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Hard tossed</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta excepturi facere magnam, quos sed voluptas voluptatum. A at cumque debitis doloribus, harum iste iure necessitatibus nobis optio sint voluptate voluptatibus!</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Option 1
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Option 2
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h5 class="card-title">Crispy Thin</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta excepturi facere magnam, quos sed voluptas voluptatum. A at cumque debitis doloribus, harum iste iure necessitatibus nobis optio sint voluptate voluptatibus!</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="crispy1" value="option1" checked>
+                                        <label class="form-check-label" for="crispy1">
+                                            crispy 1
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="crispy2" value="option2">
+                                        <label class="form-check-label" for="crispy2">
+                                            crispy 2
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="#" class="btn btn-primary float-right">Next Step</a>
+                </div>
+            </div>
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            Second tab
+        <div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Select cheese and sauce
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Cheese</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">how much?</p>
+                            <select class="custom-select custom-select-lg mb-3">
+                                <option selected>Open this select menu</option>
+                                <option value="1">A lot</option>
+                                <option value="2">Tons</option>
+                                <option value="3">The limit doesn't exist</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h5 class="card-title">Sauce</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"></p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p>What type?</p>
+                                    <select class="custom-select custom-select-lg mb-3">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">A lot</option>
+                                        <option value="2">Tons</option>
+                                        <option value="3">The limit doesn't exist</option>
+                                    </select>
+                                </li>
+                                <li class="list-group-item">
+                                    <p>How much?</p>
+                                    <select class="custom-select custom-select-lg mb-3">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">A lot</option>
+                                        <option value="2">Tons</option>
+                                        <option value="3">The limit doesn't exist</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="#" class="btn btn-primary float-right">Next Step <i class="fas fa-chevron-right"></i></a>
+                    <a href="#" class="btn btn-primary float-right"><i class="fas fa-chevron-left"></i> Previous Step</a>
+                </div>
+            </div>
         </div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
             3rd tab
         </div>
     </div>
