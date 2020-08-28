@@ -10,8 +10,13 @@
             background-color: #480e0e;
             margin: 10px;
         }
+
         .title {
             color: white;
+        }
+
+        .btn {
+            background-color: #3B94D9;
         }
     </style>
 </head>
@@ -51,55 +56,72 @@
     </div>
 </form>
 
+<a href="http://www.google.com" id="search-link">Web Search</a>
+
+
 <script>
     "use strict";
     // (function() {
-        var divMain = document.getElementById("main-content");
-        var btn = document.getElementById("btnToClick");
-        var divs = document.getElementsByTagName("div");
+    var divMain = document.getElementById("main-content");
+    var btn = document.getElementById("btnToClick");
+    var divs = document.getElementsByTagName("div");
+    var searchLink = document.getElementById("search-link");
 
-        console.log(btn); // prints <button id="btnToClick">Click Me</button>
-        console.log(divMain);
-        console.log(divs);
-
-
-        // Get all elements with class 'even'
-        var evenElements = document.getElementsByClassName('even');
-
-        // Print the first element
-        console.log(evenElements[0]); // Prints li.even.list-one-item
-
-        // Print all elements
-        for (var i = 0; i < evenElements.length; i++) {
-            console.log('prints from for loop', evenElements[i]);
-        }
-
-        var listItems = document.getElementsByTagName('li');
-
-        // Print the first list item
-        console.log(listItems[0]); // Prints li.odd.list-one-item
-
-        // Print all the list items
-        for (var i = 0; i < listItems.length; i++) {
-            console.log('all lis from loop', listItems[i]);
-        }
-
-        var usernameInput = document.forms.login.username;
-
-        // log the value of the "username" input
-        console.log('log the value of the "username" input', usernameInput.value);
+    console.log(btn); // prints <button id="btnToClick">Click Me</button>
+    console.log(divMain);
+    console.log(divs);
 
 
-        var news = ['Elon Musk to show off working brain-hacking device\n', 'Should publishers welcome or fear the tech giant’s plan to expand its news feature. Read more\n' +
-        '\n', 'Mini robo-surgeon performs mock surgery and other news\n'];
+    // Get all elements with class 'even'
+    var evenElements = document.getElementsByClassName('even');
 
-        for(var i = 0; i < divs.length; i++){
-            divs[i].innerHTML = '<h1 class="title">'+  news[i] +'</h1>';
-        }
+    // Print the first element
+    console.log(evenElements[0]); // Prints li.even.list-one-item
+
+    // Print all elements
+    for (var i = 0; i < evenElements.length; i++) {
+        console.log('prints from for loop', evenElements[i]);
+    }
+
+    var listItems = document.getElementsByTagName('li');
+
+    // Print the first list item
+    console.log(listItems[0]); // Prints li.odd.list-one-item
+
+    // Print all the list items
+    for (var i = 0; i < listItems.length; i++) {
+        console.log('all lis from loop', listItems[i]);
+    }
+
+    var usernameInput = document.forms.login.username;
+
+    // log the value of the "username" input
+    console.log('log the value of the "username" input', usernameInput.value);
+
+
+    var news = ['Elon Musk to show off working brain-hacking device\n', 'Should publishers welcome or fear the tech giant’s plan to expand its news feature. Read more\n' +
+    '\n', 'Mini robo-surgeon performs mock surgery and other news\n'];
+
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].innerHTML = '<h1 class="title">' + news[i] + '</h1>';
+    }
+
+    // Does an element have an attribute?
+    console.log(searchLink.hasAttribute("href")); // Prints true
+    console.log(searchLink.hasAttribute("class")); // Prints false
+
+    // Get an attribute value
+    console.log(searchLink.getAttribute("href"));
+
+    var delay = 3000; // delay time in milliseconds
+
+    var timeoutId = setTimeout(function () {
+        document.body.style.backgroundColor = "grey";
+    }, delay);
+
 
     // })();
 </script>
-
 
 
 </body>
