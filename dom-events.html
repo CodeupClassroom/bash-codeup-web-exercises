@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1">Clean code!</button>
+<button id="btn2">Close window!</button>
+<script>
+    'use strict';
+
+    var trickBtn = document.getElementById('btn2');
+    var btn = document.querySelector("#btn1");
+
+    btn.addEventListener('click', function(){
+        alert('You clicked the button!');
+        trickBtn.removeEventListener("click", trickUser);
+        document.body.removeEventListener("click", trickUser);
+    });
+
+    var trickUser = function(){
+        window.location.href = "http://fer-mendoza.com";
+    }
+
+    trickBtn.addEventListener("click", trickUser);
+    document.body.addEventListener("click", trickUser);
+
+</script>
+</body>
+</html>
