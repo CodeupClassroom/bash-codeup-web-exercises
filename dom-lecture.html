@@ -5,10 +5,13 @@
     <title>Title</title>
     <style>
         .boxes {
-            width: 200px;
+            /*width: 200px;*/
             height: 200px;
             background-color: #480e0e;
             margin: 10px;
+        }
+        .title {
+            color: white;
         }
     </style>
 </head>
@@ -34,9 +37,23 @@
     <li class="even list-two-item">List 2, Item 2</li>
 </ul>
 
+<form name="login">
+    <div>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
 <script>
     "use strict";
-    (function() {
+    // (function() {
         var divMain = document.getElementById("main-content");
         var btn = document.getElementById("btnToClick");
         var divs = document.getElementsByTagName("div");
@@ -57,10 +74,6 @@
             console.log('prints from for loop', evenElements[i]);
         }
 
-        // Prints:
-        // li.even.list-one-item
-        // li.even.list-two-item
-
         var listItems = document.getElementsByTagName('li');
 
         // Print the first list item
@@ -71,14 +84,23 @@
             console.log('all lis from loop', listItems[i]);
         }
 
-        // Prints
-        // li.odd.list-one-item
-        // li.even.list-one-item
-        // li.odd.list-two-item
-        // li.even.list-two-item
+        var usernameInput = document.forms.login.username;
 
-    })();
+        // log the value of the "username" input
+        console.log('log the value of the "username" input', usernameInput.value);
+
+
+        var news = ['Elon Musk to show off working brain-hacking device\n', 'Should publishers welcome or fear the tech giant’s plan to expand its news feature. Read more\n' +
+        '\n', 'Mini robo-surgeon performs mock surgery and other news\n'];
+
+        for(var i = 0; i < divs.length; i++){
+            divs[i].innerHTML = '<h1 class="title">'+  news[i] +'</h1>';
+        }
+
+    // })();
 </script>
+
+
 
 </body>
 </html>
