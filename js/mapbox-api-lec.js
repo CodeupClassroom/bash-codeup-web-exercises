@@ -14,9 +14,13 @@
 
 //TODO TOGETHER: Set map to Dallas area using the coordinates [-96.8057, 32.7787]
 
-
-
-
+mapboxgl.accessToken = mapboxToken;
+// var map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+//     center: [-96.8057, 32.7787], // starting position [lng, lat]
+//     zoom: 9 // starting zoom
+// });
 
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
@@ -33,8 +37,13 @@
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-96.8084, 32.7799]. This marker will mark the Sixth Floor Muesume on our map.
 // TODO TOGETHER: Change the color of the marker
 
-
-
+// var markerOptions = {
+//     color: 'red',
+//     draggable: true
+// }
+// var marker = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-96.8084, 32.7799])
+//     .addTo(map);
 
 
 
@@ -51,10 +60,19 @@
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
-
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-96.8084, 32.7799])
+//     .setHTML("<p>Codeup Rocks!</p>")
+//     .addTo(map)
 
 
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the Sixth Floor Musume marker.
+
+// var popupMuseum = new mapboxgl.Popup({closeOnMove: true})
+//     .setHTML("<h4>Sixth Floor Museum</h4>")
+//     .addTo(map);
+//
+// marker.setPopup(popupMuseum);
 
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
@@ -70,13 +88,24 @@
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
 
+geocode("300 Alamo Plaza, San Antonio, TX 78205", mapboxToken)
+    .then(function(result){
+        console.log(result);
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            center: result, // starting position [lng, lat]
+            zoom: 16 // starting zoom
+        });
+
+        //TODO: Using the geocode method above, add a marker at Codeup to the map
+        //TODO: Instead of setCenter try using map.jumpTo()
+        //TODO: Instead of setCenter try using map.flyTo()
+    });
 
 
 
 
-//TODO: Using the geocode method above, add a marker at Codeup to the map
-//TODO: Instead of setCenter try using map.jumpTo()
-//TODO: Instead of setCenter try using map.flyTo()
 
 
 
