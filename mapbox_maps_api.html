@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Exercise</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<script src="js/keys.js"></script>
+<!-- Mapbox Geocoder Util Methods -->
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!-- Custom JS -->
+<script>
+
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 5,
+        center: [-96.798685, 32.781214]
+    });
+
+    // the  geocode method from mapbox-geocoder-utils.js
+    geocode("4350 Belt Line Rd, Addison, TX 75001", mapboxToken).then(function(result) {
+        // console.log(result);
+        map.setCenter(result);
+        // Yes we can set the zoom level programmatically
+        map.setZoom(16);
+
+        var popup = new mapboxgl.Popup()
+            .setHTML("<h6>Osaka Sushi</h6>");
+        var marker = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map)
+            .setPopup(popup);
+
+        //popup.addTo(map);
+    });
+
+</script>
+</body>
+</html>
