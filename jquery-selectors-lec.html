@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 id="main-title">Selectors</h1>
+
+<div class="container">
+    <ul>
+        <li class="colored">1st</li>
+        <li class="colored">2nd</li>
+        <li>2nd</li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        // * {
+        //     color: red;
+        // }
+        $("*").css("color", "blue");
+
+        $("#main-title").css("color", "red");
+
+        $(".colored").css("text-decoration", "underline");
+
+        $("li").css("background-color","black");
+
+        $("ul, .container").css("border","2px solid red");
+
+    });
+</script>
+</body>
+</html>
