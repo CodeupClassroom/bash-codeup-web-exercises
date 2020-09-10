@@ -7,6 +7,9 @@
         .container {
             /*height: 50vh;*/
         }
+        .item {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -29,29 +32,36 @@
     </div>
 </main>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         console.log("Ready to go");
 
-        function changeBgColor(){
+        function changeBgColor() {
             $(".container").css("background-color", "pink");
         }
 
-        $("#change-title-btn").click(function(){
+        $("#change-title-btn").click(function () {
             console.log("change-title-btn clicked");
-           $("#main-title").css("color", "navy");
+            $("#main-title").css("color", "navy");
         });
 
-        $("#change-container-btn").click( changeBgColor );
+        $("#change-container-btn").click(changeBgColor);
 
-        $("#main-title").dblclick(function(){
+        $("#main-title").dblclick(function () {
             $(this).css("color", "red");
         });
 
-        $(".item").dblclick(function(){
+        $(".item").dblclick(function () {
             $(this).css("text-decoration", "line-through");
+        });
+
+        $(".item").hover(function () {
+            $(this).css("font-size", "1.3em");
+        }, function () {
+            $(this).css("font-size", "0.9em");
         });
 
     });
