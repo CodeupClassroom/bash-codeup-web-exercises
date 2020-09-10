@@ -3,21 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .container {
+            /*height: 50vh;*/
+        }
+    </style>
 </head>
 <body>
 
-<h1>Title for events</h1>
+<header class="container">
+    <h1 id="main-title">Title for events</h1>
+</header>
 
 <main class="container">
     <div id="blog-post-container">
-
+        <button id="change-title-btn">Change color of title</button>
+        <button id="change-container-btn">Change color of container</button>
     </div>
 </main>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
+
         console.log("Ready to go");
+
+        function changeBgColor(){
+            $(".container").css("background-color", "pink");
+        }
+
+        $("#change-title-btn").click(function(){
+            console.log("change-title-btn clicked");
+           $("#main-title").css("color", "navy");
+        });
+
+        $("#change-container-btn").click( changeBgColor );
+
     });
 </script>
 
