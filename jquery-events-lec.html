@@ -27,6 +27,13 @@
             <li class="item">Bread</li>
         </ul>
 
+        <p>Please type something into this form:</p>
+        <form>
+            <span id="result"></span>
+            <input type="text" id="text-field" name="text-field" placeholder="Type Here"/>
+        </form>
+
+        <button id="remove-btn">remove events</button>
         <button id="change-title-btn">Change color of title</button>
         <button id="change-container-btn">Change color of container</button>
     </div>
@@ -62,6 +69,20 @@
             $(this).css("font-size", "1.3em");
         }, function () {
             $(this).css("font-size", "0.9em");
+        });
+
+        $("#text-field").keypress(function(event){
+            console.log("the " + event.key+ "  key was pressed");
+            console.log("the " + event.keyCode+ "  key was pressed");
+            $("#result").append(event.key)
+        });
+
+        // Off & On · Sophie Ellis-Bextor
+        // https://www.youtube.com/watch?v=1a-7bGlN2sg
+
+        $("#remove-btn").on("click", function(){
+            $("#text-field").off("keypress");
+            //$("#text-field").off();
         });
 
     });

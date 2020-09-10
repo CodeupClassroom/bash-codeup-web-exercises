@@ -7,7 +7,7 @@
 <body>
 
 <div class="header" id="codeup">
-    <h1>Hello jQuery</h1>
+    <h1 id="main-title">Hello jQuery</h1>
     <h1>Hello Codeup</h1>
 </div>
 <div class="content" id="content">
@@ -29,23 +29,21 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function () {
-        console.log('I am ready!');
-        // Remove your custom jQuery code from previous exercises.
-        //alert($('#content').html());
-        //alert($('#todo-list').html());
-        //$('.codeup').css('border', '1px solid red');
 
-        // Using jQuery, set the font-size of all li elements to 20px.
-        $('li').css('font-size', '20px');
+        $("#main-title").click(function(){
+            $(this).css("background-color", "cyan");
+        });
 
-        // Craft selectors that highlight all the h1, p, and li elements.
-        $('li').css('background-color', 'yellow');
-        $('h1').css('background-color', 'yellow');
-        $('p').css('background-color', 'yellow');
-        // Create a jQuery statement to alert the contents of your h1 element(s).
-        alert($('h1').text());
-        // Combine your selectors that highlight all the h1, p, and li elements.
-        $('li, h1, p').css('background-color', '#D0D176');
+        $("p").dblclick(function(){
+            $("p").css("font-size", "18px");
+        });
+
+        $("li").hover(function(){
+            $("li").css("color", "red");
+        },function(){
+            $("li").css("color", "black");
+        })
+
     });
 </script>
 </body>
