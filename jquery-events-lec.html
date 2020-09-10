@@ -17,6 +17,13 @@
 
 <main class="container">
     <div id="blog-post-container">
+
+        <ul>
+            <li class="item">Fruits</li>
+            <li class="item">Vegetables</li>
+            <li class="item">Bread</li>
+        </ul>
+
         <button id="change-title-btn">Change color of title</button>
         <button id="change-container-btn">Change color of container</button>
     </div>
@@ -38,6 +45,14 @@
         });
 
         $("#change-container-btn").click( changeBgColor );
+
+        $("#main-title").dblclick(function(){
+            $(this).css("color", "red");
+        });
+
+        $(".item").dblclick(function(){
+            $(this).css("text-decoration", "line-through");
+        });
 
     });
 </script>
