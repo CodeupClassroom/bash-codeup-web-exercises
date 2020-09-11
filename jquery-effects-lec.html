@@ -12,9 +12,9 @@
 </head>
 <body>
     <h3 id="main-title">National Parks</h3>
-    <button id="hide-main-title">Hide title</button>
-    <button id="show-main-title">Show title</button>
-    <button id="toggle-main-title">Toggle title</button>
+    <button id="hide-main-title">Slide Up title</button>
+    <button id="show-main-title">Slide down title</button>
+    <button id="toggle-main-title">Slide Toggle title</button>
     <ul id="national-parks">
         <li>Arches</li>
         <li>Badlands</li>
@@ -70,17 +70,20 @@
         $(document).ready(function(){
            $("#hide-main-title").click( function(){
                 // $("#main-title").hide();
-               $("#main-title").fadeOut();
+               // $("#main-title").fadeOut();
+               $("#main-title").slideUp();
            });
 
             $("#show-main-title").click( function(){
                 // $("#main-title").show();
-                $("#main-title").fadeIn();
+                // $("#main-title").fadeIn();
+                $("#main-title").slideDown();
             });
 
             $("#toggle-main-title").click( function(){
                 // $("#main-title").toggle();
-                $("#main-title").fadeToggle(5000);
+                // $("#main-title").fadeToggle(5000);
+                $("#main-title").slideToggle();
             });
         });
     </script>
