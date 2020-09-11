@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Traversing Lesson</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3>National Parks</h3>
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+
+    <dl>
+        <dt>Lorem Park</dt>
+        <dd class="invisible">Something something, blah blah.</dd>
+
+        <dt>Ipsum Lake</dt>
+        <dd class="invisible">.halb halb, gnihtemos gnihtemoS</dd>
+
+        <dt>Computer Park</dt>
+        <dd class="invisible">Look at all those Gateways...</dd>
+
+        <dt>Boiler Plate</dt>
+        <dd class="invisible">This might be a bit plain...</dd>
+
+        <dt>Schmear Geyser</dt>
+        <dd class="invisible">Get your bagels, my dudes.</dd>
+
+        <dt>Dab On 'Em Cliff</dt>
+        <dd class="invisible">Cam Newton's fault, probably.</dd>
+
+        <dt>Astrodome</dt>
+        <dd class="invisible">Houston baseball park.</dd>
+
+        <dt>Texas Cyclone</dt>
+        <dd class="invisible">Was a cool roller coaster.</dd>
+
+        <dt>My Aunt Pam's House</dt>
+        <dd class="invisible">They have a pomeranian.</dd>
+
+        <dt>Jellystone National Park</dt>
+        <dd class="invisible">Yogi lives there.</dd>
+    </dl>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+           console.log('ready');
+           var $dts = $('dt');
+           //jQuery each method
+            $dts.each(function (index, element){
+               console.log(index, element);
+               if(index % 2 === 0){
+                   $(element).css('background-color', 'lightblue')
+               }
+           });
+
+           //jQuery first method
+            $dts.first().css('background-color', 'yellow');
+
+            //jQuery last method
+            $dts.last().css('background-color', 'green');
+
+            //jQuery children method
+            //$('#national-parks').children().addClass('highlight');
+
+            $('#national-parks').children().last().addClass('highlight');
+
+            //Parent
+            //console.log($('#state-parks-texas > li').parent());
+
+            $('li').click(function(){
+                console.log(this);
+                $(this).parent().toggleClass('highlight');
+            });
+
+            $('dt').click(function(){
+                $(this).next().toggleClass('highlight');
+            });
+        });
+    </script>
+</body>
+</html>
