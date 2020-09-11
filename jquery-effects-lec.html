@@ -69,15 +69,18 @@
     <script>
         $(document).ready(function(){
            $("#hide-main-title").click( function(){
-                $("#main-title").hide();
+                // $("#main-title").hide();
+               $("#main-title").fadeOut();
            });
 
             $("#show-main-title").click( function(){
-                $("#main-title").show();
+                // $("#main-title").show();
+                $("#main-title").fadeIn();
             });
 
             $("#toggle-main-title").click( function(){
-                $("#main-title").toggle();
+                // $("#main-title").toggle();
+                $("#main-title").fadeToggle(5000);
             });
         });
     </script>
