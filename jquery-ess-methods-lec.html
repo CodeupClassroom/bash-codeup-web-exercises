@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Essential Methods</title>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+<header class="container">
+    <h1 id="main-title">Title for events</h1>
+</header>
+
+<main class="container">
+    <div id="blog-post-container">
+
+        <ul>
+            <li class="item">Fruits</li>
+            <li class="item">Vegetables</li>
+            <li class="item">Bread</li>
+        </ul>
+
+        <p>Please type something into this form:</p>
+        <form>
+            <span id="result"></span>
+            <input type="text" id="text-field" name="text-field" placeholder="Type Here"/>
+        </form>
+
+        <button id="remove-highlight-btn">Remove Highlight</button>
+        <button id="toggle-highlight-btn">Toggle Highlight</button>
+        <button id="change-container-btn">Change color of container</button>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function (){
+        console.log("Document is ready.");
+        //HTML returns the HTML contents of the first element in the result set.
+        var firstContainerHTML = $('.container').html();
+        console.log(firstContainerHTML);
+
+        //Getter
+        var mainElementContent = $('main').html();
+        console.log(mainElementContent);
+
+        //Setter
+        $('#main-title').html('jQuery Essential Methods Lecture');
+
+        //CSS Method lets us get or set css properties on the result of the selector.
+        //console.log($('li').css('background-color'));
+        //$('li').css('background-color', 'blue').css('font-size', '3em');
+        // $('li').css({
+        //     'background-color': 'blue',
+        //     'font-size':'3em'
+        // });
+        // console.log($('li').css('background-color'));
+
+        //addClass
+        $('p').addClass('highlight');
+
+        //removeClass
+        $('#remove-highlight-btn').click(function(){
+            $('p').removeClass('highlight');
+        });
+
+        //toggleClass
+        $('#toggle-highlight-btn').on('click', function(){
+            $('p').toggleClass('highlight');
+        });
+    });
+</script>
+</body>
+</html>
