@@ -21,11 +21,7 @@ $(document).ready(function() {
 
     $.ajax(url)
         .done(function(data){
-            console.log('data', data.topalbums.album);
             for(var i=0; i<=9; i++){
-                // console.log(data.topalbums.album[i].artist.name);
-                // console.log(data.topalbums.album[i].name);
-                // console.log(data.topalbums.album[i].image[2]['#text']);
                 finalHTML += "<div class=\"albums\">\n" +
                     "                    <h1>#"+(i+1)+" "+data.topalbums.album[i].name+"</h1>\n" +
                     "                    <h3>"+data.topalbums.album[i].artist.name+"</h3>\n" +
@@ -41,5 +37,26 @@ $(document).ready(function() {
         });
 
     console.log("sync always");
+
+    // $.get("http://ws.audioscrobbler.com/2.0", {
+    //     "method": "user.getTopAlbums",
+    //     "user": username,
+    //     "api_key": lastFMKey,
+    //     "format": "json"
+    // }).done(function(data){
+    //         for(var i=0; i<=9; i++){
+    //             finalHTML += "<div class=\"albums\">\n" +
+    //                 "                    <h1>#"+(i+1)+" "+data.topalbums.album[i].name+"</h1>\n" +
+    //                 "                    <h3>"+data.topalbums.album[i].artist.name+"</h3>\n" +
+    //                 "                    <img src=\""+data.topalbums.album[i].image[2]['#text']+"\" alt=\"\">\n" +
+    //                 "                </div>";
+    //         }
+    //         $("#top-ten").append(finalHTML);
+    //     }).fail(function(jqXhr, status, error){
+    //     console.log("Response status: " + status);
+    //     console.log("Error object: " + error);
+    // }).always(function(){
+    //     console.log("async always");
+    // });
 });
 </script>
