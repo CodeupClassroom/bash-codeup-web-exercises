@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Traversing Lesson</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="main-title">National Parks</h3>
+    <button id="hide-main-title">Slide Up title</button>
+    <button id="show-main-title">Slide down title</button>
+    <button id="toggle-main-title">Slide Toggle title</button>
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+
+    <dl>
+        <dt>Lorem Park</dt>
+        <dd class="invisible">Something something, blah blah.</dd>
+
+        <dt>Ipsum Lake</dt>
+        <dd class="invisible">.halb halb, gnihtemos gnihtemoS</dd>
+
+        <dt>Computer Park</dt>
+        <dd class="invisible">Look at all those Gateways...</dd>
+
+        <dt>Boiler Plate</dt>
+        <dd class="invisible">This might be a bit plain...</dd>
+
+        <dt>Schmear Geyser</dt>
+        <dd class="invisible">Get your bagels, my dudes.</dd>
+
+        <dt>Dab On 'Em Cliff</dt>
+        <dd class="invisible">Cam Newton's fault, probably.</dd>
+
+        <dt>Astrodome</dt>
+        <dd class="invisible">Houston baseball park.</dd>
+
+        <dt>Texas Cyclone</dt>
+        <dd class="invisible">Was a cool roller coaster.</dd>
+
+        <dt>My Aunt Pam's House</dt>
+        <dd class="invisible">They have a pomeranian.</dd>
+
+        <dt>Jellystone National Park</dt>
+        <dd class="invisible">Yogi lives there.</dd>
+    </dl>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+           $("#hide-main-title").click( function(){
+                // $("#main-title").hide();
+               // $("#main-title").fadeOut();
+               $("#main-title").slideUp();
+           });
+
+            $("#show-main-title").click( function(){
+                // $("#main-title").show();
+                // $("#main-title").fadeIn();
+                $("#main-title").slideDown();
+            });
+
+            $("#toggle-main-title").click( function(){
+                // $("#main-title").toggle();
+                // $("#main-title").fadeToggle(5000);
+                $("#main-title").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
