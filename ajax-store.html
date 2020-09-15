@@ -19,36 +19,39 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="load-btn">Refresh</button>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
 (function() {
     "use strict";
 
-    var html = "";
+    var html;
     // TODO: Create an AJAX GET request for the file under data/inventory.json
     var url = "data/inventory.json";
-    $.get(url).done(function(inventory){
-        inventory.forEach(function(tool){
-            html += "<tr>\n" +
-                "    <td>"+tool.title+"</td>\n" +
-                "    <td>"+tool.quantity+"</td>\n" +
-                "    <td>$"+tool.price+"</td>\n" +
-                "    <td>"+tool.categories+"</td>\n" +
-                "</tr>";
+
+    loadTable();
+
+    function loadTable(){
+        $.get(url).done(function(inventory){
+            html = "";
+            inventory.forEach(function(tool){
+                html += "<tr>\n" +
+                    "    <td>"+tool.title+"</td>\n" +
+                    "    <td>"+tool.quantity+"</td>\n" +
+                    "    <td>$"+tool.price+"</td>\n" +
+                    "    <td>"+tool.categories+"</td>\n" +
+                    "</tr>";
+            });
+
+            $("#insertProducts").empty().html(html);
+
         });
+    }
 
-        $("#insertProducts").html(html);
+    $("#load-btn").click(loadTable);
 
-    })
-
-
-
-
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
 

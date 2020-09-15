@@ -22,13 +22,21 @@
             "gas",
             "outdoor"
         ],
-        "price": 200
+        "price": 20
     }, {
         "title": "Screwdrivers",
         "quantity": 25,
         "categories": [
             "tool"
         ],
-        "price": 10
+        "price": 9
+    },
+    {
+        "title": "Scissors",
+        "quantity": 30,
+        "categories": [
+            "tool", "school"
+        ],
+        "price": 8
     }
 ]
