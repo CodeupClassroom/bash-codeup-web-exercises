@@ -8,6 +8,10 @@
             visibility: hidden;
         }
 
+        .hide {
+            display: none;
+        }
+
         .highlight {
             background-color: yellow;
             font-weight: bold;
@@ -21,6 +25,14 @@
     </style>
 </head>
 <body>
+
+    <h2 id="register-link" class="hide">Register for updates <a href="#">here</a></h2>
+
+    <div>
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span class="close-btn">X</span>
+    </div>
+
     <a href="http://google.com" id="display-dd">Toggle</a>
     <dl>
         <dt>Lorem Park</dt>
@@ -55,7 +67,7 @@
     </dl>
 
     <h3>Snæfellsjökull</h3>
-    <ul>
+    <ul class="hide">
         <li>Stratovolcano</li>
         <li>Sometimes it may be seen from the city of Reykjavík over Faxa Bay, at a distance of 120 km.</li>
         <li>The mountain is one of the most famous sites of Iceland, primarily due to the novel Journey to the Center of the Earth (1864) by Jules Verne, in which the protagonists find the entrance to a passage leading to the center of the earth on Snæfellsjökull.</li>
@@ -63,7 +75,7 @@
     </ul>
 
     <h3>Vatnajökull</h3>
-    <ul>
+    <ul class="hide">
         <li>Vatnajökull National Park is divided into four territories.</li>
         <li>Vatnajökull is Europe's largest glacier outside the arctic, with a surface area of 8,100 km2.</li>
         <li>It encompasses all of Vatnajökull glacier and extensive surrounding areas. These include the national parks previously existing at Skaftafell in the southwest and Jökulsárgljúfur in the north.</li>
@@ -71,7 +83,7 @@
     </ul>
 
     <h3>Þingvellir</h3>
-    <ul>
+    <ul class="hide">
         <li>The National Gallery of Iceland owns more than 150 paintings by Ásgrímur Jónsson that have Þingvellir as their subject.git</li>
         <li>The name Þingvellir is derived from the Old Norse Þingvǫllr, from þing (“thing, assembly”) and vǫllr (“field”), meaning assembly fields.</li>
         <li>Þingvellir is associated with the Althing, the national parliament of Iceland, which was established at the site in 930 AD.</li>
@@ -108,6 +120,17 @@
             $('li').click(function(){
                $(this).parent().children().first().toggleClass('first-item-highlight');
             });
+
+            $(".close-btn").click(function(){
+                $(this).parent().fadeOut();
+            });
+
+            $("h3").click(function(){
+                $(this).next().slideToggle();
+            });
+
+            $("#register-link").delay(8000).fadeIn();
+
         });
     </script>
 </body>
