@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Weather Lecture</title>
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script>
+    (function(){
+        $(document).ready(function(){
+            var openWeatherAPIURL = 'http://api.openweathermap.org/data/2.5/weather';
+
+            $.get(openWeatherAPIURL, {
+                "APPID": OWM_Key,
+                "q": "Dallas, TX, US",
+                "units": "imperial"
+            }).done(function(data){
+               console.log(data);
+            });
+
+            var openWeatherDailyForecastAPIURL = "http://api.openweathermap.org/data/2.5/forecast";
+            $.get(openWeatherDailyForecastAPIURL, {
+                "APPID": OWM_Key,
+                "q": "Dallas, TX, US",
+                "units": "imperial"
+            }).done(function(data){
+                console.log(data);
+            })
+
+            $.get("http://api.openweathermap.org/data/2.5/forecast", {
+                APPID: OWM_Key,
+                lat:    29.423017,
+                lon:   -98.48527,
+                units: "imperial"
+            }).done(function(data) {
+                console.log('5 day forecast', data);
+            });
+        });
+    })();
+</script>
+</body>
+</html>
