@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="pay-btn">Pay</button>
+
+<script>
+    let albumName = "Folklore".toUpperCase();
+    let rank = 1;
+    let finalHTML = `<h1>#${rank} ${albumName}</h1>`;
+    document.write(finalHTML);
+
+    let fruits = ['apple', 'avocado', 'cherry'];
+
+    // fruits.forEach(function(fruit){
+    //     console.log(fruit);
+    // })
+
+    for(let fruit of fruits) {
+        console.log(fruit);
+    }
+
+    // const sayHello = function (name) {
+    //     return 'Hello, ' + name + '!';
+    // }
+    // same as
+    // const sayHello = (name) => 'Hello, ' + name + '!';
+    const sayHello = name => 'Hello, ' + name + '!';
+    console.log(sayHello("fer"));
+
+    const sum = (num1, num2) => num1+num2;
+    console.log(sum(1, 2));
+
+    document.getElementById("pay-btn")
+        .addEventListener("click", () => console.log("paid"));
+
+    // es6 syntax (including template strings)
+    function sayHelloV2(name = 'World') {
+        return `Hello, ${name}!`;
+    }
+
+    console.log(sayHelloV2()); // "Hello, World!"
+    console.log(sayHelloV2('codeup')); // "Hello, codeup!"
+
+    // new shorthand
+    const company = 'Codeup';
+    const IRS = {
+        company,
+        age: 6
+    };
+
+    console.log(IRS);
+
+    // new way
+    const person = {name: 'Codeup', age: 7};
+    const {name, age} = person;
+    console.log(name);
+    console.log(age);
+
+    const myArray = [1, 2, 3, 4, 5];
+    const [x, y, q ,w,r,t,p] = myArray;
+    console.log('myArray[0]',x); // 1
+    console.log('myArray[1]',y); // 2
+
+</script>
+
+</body>
+</html>
