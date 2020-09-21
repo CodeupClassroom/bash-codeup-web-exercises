@@ -48,5 +48,18 @@
         });
     });
 
+    //third form
+    const getGithubUsernames = () => fetch('https://api.github.com/users').then(response => response.json());
+
+    //... Code
+
+    // Returns a promise with some data
+    getGithubUsernames()
+        .then( users => {
+            users.forEach( userObj => {
+                // do something with each username
+                console.log(userObj.login);
+            });
+        }).catch(error => console.error(error));
 
 </script>
