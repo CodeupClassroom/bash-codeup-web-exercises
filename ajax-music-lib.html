@@ -36,25 +36,17 @@
         // Handling the errors if any
         .catch(errors => console.error(errors));
 
+    fetch('https://api.github.com/users')
+        // Handling the promise
+        .then( response => {
+            // Handling the data of the first promise, inside of the body of the arrow function
+            response.json().then( users => {
+            users.forEach( user => {
+                // do something with each user object...
+                console.log(user);
+            });
+        });
+    });
 
-    // $.get("http://ws.audioscrobbler.com/2.0", {
-    //     "method": "user.getTopAlbums",
-    //     "user": username,
-    //     "api_key": lastFMKey,
-    //     "format": "json"
-    // }).done(function(data){
-    //         for(var i=0; i<=9; i++){
-    //             finalHTML += "<div class=\"albums\">\n" +
-    //                 "                    <h1>#"+(i+1)+" "+data.topalbums.album[i].name+"</h1>\n" +
-    //                 "                    <h3>"+data.topalbums.album[i].artist.name+"</h3>\n" +
-    //                 "                    <img src=\""+data.topalbums.album[i].image[2]['#text']+"\" alt=\"\">\n" +
-    //                 "                </div>";
-    //         }
-    //         $("#top-ten").append(finalHTML);
-    //     }).fail(function(jqXhr, status, error){
-    //     console.log("Response status: " + status);
-    //     console.log("Error object: " + error);
-    // }).always(function(){
-    //     console.log("async always");
-    // });
+
 </script>
